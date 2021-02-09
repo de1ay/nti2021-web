@@ -1,90 +1,64 @@
 @font-face {
-  font-family: 'Bruno Ace SC Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Bruno Ace SC Regular'), url('../fonts/BrunoAceSC-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Poppins Regular'), url('../fonts/Poppins-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Poppins SemiBold'), url('../fonts/Poppins-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: bold;
-  src: local('Poppins Bold'), url('../fonts/Poppins-Bold.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'Fira Sans Condensed';
   font-style: normal;
   font-weight: normal;
-  src: local('Poppins Regular'), url('../fonts/FiraSansCondensed-Regular.ttf') format('truetype');
+  src: local('Fira Sans Condensed Regular'), url('../fonts/FiraSansCondensed-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Fira Sans Condensed';
   font-style: normal;
   font-weight: 600;
-  src: local('Poppins SemiBold'), url('../fonts/FiraSansCondensed-SemiBold.ttf') format('truetype');
+  src: local('Fira Sans Condensed SemiBold'), url('../fonts/FiraSansCondensed-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Fira Sans Condensed';
   font-style: normal;
   font-weight: bold;
-  src: local('Poppins Bold'), url('../fonts/FiraSansCondensed-Bold.ttf') format('truetype');
+  src: local('Fira Sans Condensed Bold'), url('../fonts/FiraSansCondensed-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
-  src: local('Poppins Regular'), url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  src: local('Montserrat Regular'), url('../fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  src: local('Poppins SemiBold'), url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+  src: local('Montserrat SemiBold'), url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
-  src: local('Poppins Bold'), url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  src: local('Montserrat Bold'), url('../fonts/Montserrat-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: normal;
-  src: local('Poppins Regular'), url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
+  src: local('Source Sans Pro Regular'), url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
-  src: local('Poppins SemiBold'), url('../fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+  src: local('Source Sans Pro SemiBold'), url('../fonts/SourceSansPro-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: bold;
-  src: local('Poppins Bold'), url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
+  src: local('Source Sans Pro Bold'), url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
 }
+
+
