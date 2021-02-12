@@ -30,19 +30,56 @@ div.landing
       div.about-card.about-card--reviews
         div.card-title
           mdicon.star-icon(
-            name="star")
+            name="star"
+            :size="30")
           mdicon.star-icon(
-            name="star")
+            name="star"
+            :size="30")
           mdicon.star-icon(
-            name="star")
+            name="star"
+            :size="30")
           mdicon.star-icon(
-            name="star")
+            name="star"
+            :size="30")
           mdicon.star-icon(
-            name="star")
+            name="star"
+            :size="30")
         div.card-text 150 положительных отзывов
       div.about-card.about-card--projects
         div.card-title 150+
         div.card-text законченных проектов
+  div.section.section--workers
+    div.workers-left
+      div.workers-left__column
+        div.workers-card
+          div.card-content
+            div.card-icon__wrapper
+              mdicon.card-icon(
+                name="currencyUsd"
+                :size="30")
+            div.card-text Переплата за ненормированный рабочий день
+        div.workers-card
+          div.card-content
+            div.card-icon__wrapper
+              mdicon.card-icon(
+                name="homeAccount"
+                :size="30")
+            div.card-text Ошибки и человеческий фактор
+      div.workers-left__column
+        div.workers-card
+          div.card-content
+            div.card-icon__wrapper
+              mdicon.card-icon(
+                name="alarm"
+                :size="28")
+            div.card-text Перекуры, отлынивание от работы
+    div.workers-right
+      div.workers-title Как часто ваши работники ошибаются и тратят драгоценное время?
+      div.workers-text
+        | Мы это знаем не по наслышке. По нашим исследованиям работники на больших складах тратят
+        | больше 35% рабочего времени в пустую. только потому что они люди.
+        | Мы предлагаем вам это исправить!
+      div.workers-button Свяжитесь со мной
 </template>
 
 <script>
@@ -257,6 +294,115 @@ export default {
             bottom: -30px;
             left: -30px;
             box-shadow: -22px 22px 50px -10px rgba(12,44,120,0.64);
+          }
+
+        }
+
+      }
+
+    }
+
+    &--workers {
+      padding: 60px 0 70px 0;
+      position: relative;
+      display: flex;
+
+      .workers {
+
+        &-left {
+          display: flex;
+          align-items: stretch;
+        }
+
+        &-right {
+          margin-left: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &-title {
+          font-size: 35px;
+          font-family: $font-firaSansCondensed;
+        }
+
+        &-text {
+          margin-top: 15px;
+          font-size: 16px;
+          font-family: $font-sourceSansPro;
+        }
+
+        &-button {
+          margin-top: 15px;
+          height: 35px;
+          width: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $color-surface;
+          background-color: $color-primary;
+          font-size: 18px;
+          font-family: $font-firaSansCondensed;
+          border-radius: 10px;
+          transition: background-color .2s ease-in-out;
+
+          &:hover {
+            background-color: $color-primaryDark;
+            cursor: pointer;
+          }
+
+        }
+
+        &-left__column {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          &:not(:first-child) {
+            margin-left: 15px;
+          }
+
+        }
+
+        &-card {
+          padding: 40px;
+          min-width: 230px;
+          background: $color-surface;
+          border-radius: 30px;
+          transform: skew(5deg) rotate(5deg);
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+          &:not(:first-child) {
+            margin-top: 15px;
+          }
+
+          .card {
+
+            &-content {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              transform: skew(-5deg) rotate(-5deg);
+            }
+
+            &-icon__wrapper {
+              padding: 10px;
+              background-color: $color-primaryLight;
+              border-radius: 100px;
+            }
+
+            &-icon {
+              color: $color-primaryDark;
+            }
+
+            &-text {
+              margin-top: 10px;
+              font-size: 21px;
+              font-family: $font-sourceSansPro;
+            }
+
           }
 
         }

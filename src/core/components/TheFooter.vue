@@ -30,6 +30,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-wrap: wrap;
   color: $color-surface;
   background: $color-neutralDarkest;
 
