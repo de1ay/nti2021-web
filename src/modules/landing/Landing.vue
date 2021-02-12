@@ -119,7 +119,6 @@ div.landing
 </template>
 
 <script>
-
 export default {
   name: 'Landing',
 };
@@ -318,7 +317,7 @@ export default {
             .card-title {
 
               .star-icon {
-                color: $color-primaryDark;
+                color: $color-secondary;
               }
 
             }
