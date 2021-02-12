@@ -20,24 +20,24 @@
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat Alternates';
   font-style: normal;
   font-weight: normal;
-  src: local('Montserrat Regular'), url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  src: local('Montserrat Alternates Regular'), url('../fonts/MontserratAlternates-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat Alternates';
   font-style: normal;
   font-weight: 600;
-  src: local('Montserrat SemiBold'), url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+  src: local('Montserrat Alternates SemiBold'), url('../fonts/MontserratAlternates-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat Alternates';
   font-style: normal;
   font-weight: bold;
-  src: local('Montserrat Bold'), url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  src: local('Montserrat Alternates Bold'), url('../fonts/MontserratAlternates-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -61,4 +61,25 @@
   src: local('Source Sans Pro Bold'), url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

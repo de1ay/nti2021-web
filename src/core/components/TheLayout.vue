@@ -1,6 +1,7 @@
 <template lang="pug">
 div.layout
   TheHeader
+  router-view
   TheFooter
 </template>
 
@@ -16,3 +17,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.layout {
+  max-width: 1420px;
+  flex: 1;
+}
+</style>
