@@ -60,11 +60,11 @@ div.landing
             div.card-text Переплата за ненормированный рабочий день
         div.workers-card
           div.card-content
-            div.card-icon__wrapper
-              mdicon.card-icon(
-                name="homeAccount"
-                :size="30")
-            div.card-text Ошибки и человеческий фактор
+              div.card-icon__wrapper
+                mdicon.card-icon(
+                  name="homeAccount"
+                  :size="30")
+              div.card-text Ошибки и человеческий фактор
       div.workers-left__column
         div.workers-card
           div.card-content
@@ -80,6 +80,42 @@ div.landing
         | больше 35% рабочего времени в пустую. только потому что они люди.
         | Мы предлагаем вам это исправить!
       div.workers-button Свяжитесь со мной
+  div.section.section--why
+    div.why-title Почему вам стоит уходить в автоматизацию?
+    div.why-text
+      | Так как программное обеспечение уже написано и готово к внедрению,
+      | наши клиенты платят только ежемесячную подписку и
+      | имеют возможность доработки решения под себя с нашей помощью.
+    div.why-card
+      div.card-content__wrapper
+        div.card-content
+          div.card-icon__wrapper
+            mdicon.card-icon(
+              name="earth"
+              :size="30")
+          div.card-title Онлайн доступный ресурс
+          div.card-text
+            | Управляйте вашим складом и смотрите за работоспособностью из любой точки мира
+    div.why-card.why-card--security
+      div.card-content__wrapper
+        div.card-content
+          div.card-icon__wrapper
+            mdicon.card-icon(
+              name="security"
+              :size="30")
+          div.card-title Продвинутая система безопасности
+          div.card-text Система склада использует лучшие системы для противодействия взлому
+    div.why-card.why-card--currencyUsd
+      div.card-content__wrapper
+        div.card-content
+          div.card-icon__wrapper
+            mdicon.card-icon(
+              name="currencyUsd"
+              :size="30")
+          div.card-title Работать с нами дешевле в перспективе
+          div.card-text
+            | С нашими клиентами мы работаем на протяжении многих лет и
+            | эта модель является наиболее удобной для всех
 </template>
 
 <script>
@@ -399,6 +435,140 @@ export default {
 
             &-text {
               margin-top: 10px;
+              font-size: 21px;
+              font-family: $font-sourceSansPro;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &--why {
+      position: relative;
+      padding: 60px 0 70px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: $color-surface;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: $color-surface;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background: $color-surface;
+      }
+
+      .why {
+
+        &-title {
+          font-size: 35px;
+          font-family: $font-firaSansCondensed;
+        }
+
+        &-text {
+          margin: 30px 0 250px 0;
+          max-width: 650px;
+          font-size: 16px;
+          font-family: $font-sourceSansPro;
+        }
+
+        &-card {
+          position: relative;
+          margin-right: 30px;
+          margin-bottom: 15px;
+          width: 400px;
+          display: flex;
+          background-color: $color-primary;
+          border-radius: 15px;
+          transform: skew(-2deg) rotate(-2deg);
+
+          &:not(:first-child) {
+            margin-top: 15px;
+          }
+
+          &::after {
+            z-index: 1;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-right: 15px;
+            padding-bottom: 5px;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: 5px solid $color-primaryLight;
+            border-radius: 15px;
+          }
+
+          &--security {
+            position: absolute;
+            top: 250px;
+            right: 500px;
+          }
+
+          &--currencyUsd {
+            position: absolute;
+            right: 0;
+          }
+
+          .card {
+
+            &-content__wrapper {
+              z-index: 1000;
+              padding: 40px;
+              width: 100%;
+              height: 100%;
+              background-color: $color-primary;
+              border-radius: 15px;
+            }
+
+            &-content {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              transform: skew(2deg) rotate(2deg);
+            }
+
+            &-icon__wrapper {
+              padding: 10px;
+              background-color: $color-primaryDark;
+              border-radius: 100px;
+            }
+
+            &-icon {
+              color: $color-surface;
+            }
+
+            &-title {
+              margin-top: 10px;
+              color: $color-surface;
+              font-size: 28px;
+              font-family: $font-montserratAlternates;
+            }
+
+            &-text {
+              margin-top: 10px;
+              color: $color-surface;
               font-size: 21px;
               font-family: $font-sourceSansPro;
             }
