@@ -30,10 +30,14 @@ export default {
   font-size: 20px;
   font-weight: 600;
   font-family: $font-montserratAlternates;
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: $color-primary;
+  }
 
   &--active {
     color: $color-primary;
-    transition: color .2s ease-in-out;
   }
 
 }

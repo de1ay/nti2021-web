@@ -1,4 +1,8 @@
 <template lang="pug">
+the-development-video-modal(
+  v-if="isDevelopmentVideoModalOpen"
+  @close="setIsDevelopmentVideoModalOpen(false)"
+)
 footer.footer
   div.footer-column.footer-column--company
     div.footer-text.footer-text--company_name ООО "СТА"
@@ -11,15 +15,30 @@ footer.footer
     router-link.footer-text(:to="{name: 'About'}") О нас
   div.footer-column.footer-column--support
     div.footer-text.footer-text--heading Поддержка
-    div.footer-text Видео разработки
+    div.footer-text(@click="setIsDevelopmentVideoModalOpen(true)") Видео разработки
     div.footer-text Оставить сообщение
     div.footer-text Регламент
     div.footer-text Дополнительные материалы
 </template>
 
 <script>
+import TheDevelopmentVideoModal from '@core/components/TheDevelopmentVideoModal.vue';
+
 export default {
   name: 'TheFooter',
+  components: {
+    TheDevelopmentVideoModal,
+  },
+  data() {
+    return {
+      isDevelopmentVideoModalOpen: false,
+    };
+  },
+  methods: {
+    setIsDevelopmentVideoModalOpen(isDevelopmentVideoModalOpen) {
+      this.isDevelopmentVideoModalOpen = isDevelopmentVideoModalOpen;
+    },
+  },
 };
 </script>
 

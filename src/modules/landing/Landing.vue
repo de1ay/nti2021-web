@@ -1,4 +1,8 @@
 <template lang="pug">
+the-development-video-modal(
+  v-if="isDevelopmentVideoModalOpen"
+  @close="setIsDevelopmentVideoModalOpen(false)"
+)
 div.landing
   div.section.section--welcome
     div.welcome-title ООО “Современные технологии автоматизации”
@@ -9,7 +13,7 @@ div.landing
      div.description-bottom
       | На данном сайте представлено пример того, как можно
       | автоматизировать ваш склад и сэкономить на этом ваши деньги
-    div.welcome-video
+    div.welcome-video(@click="setIsDevelopmentVideoModalOpen(true)")
       mdicon.video-icon(
         name="playCircleOutline"
         :size="40")
@@ -119,8 +123,23 @@ div.landing
 </template>
 
 <script>
+import TheDevelopmentVideoModal from '@core/components/TheDevelopmentVideoModal.vue';
+
 export default {
   name: 'Landing',
+  components: {
+    TheDevelopmentVideoModal,
+  },
+  data() {
+    return {
+      isDevelopmentVideoModalOpen: false,
+    };
+  },
+  methods: {
+    setIsDevelopmentVideoModalOpen(isDevelopmentVideoModalOpen) {
+      this.isDevelopmentVideoModalOpen = isDevelopmentVideoModalOpen;
+    },
+  },
 };
 </script>
 

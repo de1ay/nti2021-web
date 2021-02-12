@@ -16,7 +16,6 @@ createApp(App)
   .use(VuePlyr, {
     plyr: {
       autoplay: true,
-      clickToPlay: false,
       muted: true,
     },
   })
