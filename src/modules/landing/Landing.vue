@@ -120,6 +120,40 @@ div.landing
           div.card-text
             | С нашими клиентами мы работаем на протяжении многих лет и
             | эта модель является наиболее удобной для всех
+  div.section.section--how
+    div.how-title Как это
+      span.how-title--secondary  работает?
+    div.how-description Ниже представлена модель работы наших складов и основные элементы разработки
+    div.how-section
+      img.how-section__image.how-section__image--devices(
+        :src="require('@assets/images/devices.png')")
+      div.how-section__text
+        div.how-section__text
+        | 1. Платформа доступна на любой вашей технике: от компьютера до планшета<br/><br/>
+        | 2. У вас под рукой ключевые элементы взаимодействия:<br/>
+        |   + Расписание отгрузки<br/>
+        |   + Расписание поступления товара<br/>
+        |   + Карта склада с обновлением онлайн<br/>
+        |   + Личный кабинет для контролирующих сотрудников<br/>
+        |   + Возможность срочной отгрузки по вашему запросу<br/><br/>
+        | 3. Ваш склад изначально оптимизирован на минимальное время для загрузки и отгрузки товара
+    div.how-section
+      div.how-section__text
+        | 1. Стандартная модель склада включает в себя 4 складских ряда<br/><br/>
+        | 2. В каждом ряду находится двя ряда стеллажей работа с которыми ведется
+        | через манипулятор с лифтом<br/><br/>
+        | 3. Груз к ячейке доставляется по конвейеру<br/><br/>
+        | 4. У системы под автоматическим управлением есть два направления: на доставку до
+        | ячейки и доставку на отгрузку. По решению администратора
+        | возможно перемещение из ячейки в ячейку<br/><br/>
+        | 5. Наши программисты разработали систему с помощью следующего программного обеспечения:
+        | Visual Studio, Factory I/O и Factory I/O SDK, так же мы имеем возможность
+        | работы в данных проектах через TIAportal<br/><br/>
+        | 6.  Данные по загруженности склада отоборажаются онлайн на платформе<br/><br/>
+        | 7. У вас есть возможность при непредвиденной ситуации
+        | быстро получить в месте отгрузки необходимый груз
+      img.how-section__image.how-section__image--warehouse(
+        :src="require('@assets/images/warehouse_top_down.png')")
 </template>
 
 <script>
@@ -591,6 +625,88 @@ export default {
               font-family: $font-sourceSansPro;
             }
 
+          }
+
+        }
+
+      }
+
+    }
+
+    &--how {
+      position: relative;
+      padding: 30px 0 70px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: $color-surface;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: $color-surface;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background: $color-surface;
+      }
+
+      .how {
+
+        &-title {
+          font-size: 35px;
+          font-family: $font-firaSansCondensed;
+        }
+
+        &-title--secondary {
+          color: $color-secondary;
+        }
+
+        &-description {
+          margin: 15px 0;
+          font-size: 25px;
+          font-family: $font-sourceSansPro;
+        }
+
+        &-section {
+          margin-top: 15px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          :first-child {
+            margin-right: 50px;
+          }
+
+          &__image {
+            border-radius: 30px;
+            background: transparent;
+
+            &--devices {
+              width: 800px;
+              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
+
+            &--warehouse {
+              width: 660px;
+              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
+
+          }
+
+          &__text {
+            font-size: 17px;
+            font-family: $font-sourceSansPro;
           }
 
         }
