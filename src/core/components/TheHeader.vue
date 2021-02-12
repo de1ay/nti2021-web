@@ -56,8 +56,7 @@ export default {
 }
 
 .header {
-  position: sticky;
-  margin-top: 50px;
+  margin: 50px 0 30px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
