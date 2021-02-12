@@ -27,7 +27,8 @@ export default {
       color: $color-surface;
       background: $color-primary;
       font-size: 20px;
-      font-family: $font-sourceSansPro;
+      font-weight: 600;
+      font-family: $font-firaSansCondensed;
       border-radius: 10px;
       transition: background-color .2s ease-in-out;
 
@@ -41,6 +42,7 @@ export default {
     &-sign_up {
       margin-left: 5px;
       background: none;
+      font-family: $font-firaSansCondensed;
       text-decoration: underline;
       text-decoration-style: dashed;
 

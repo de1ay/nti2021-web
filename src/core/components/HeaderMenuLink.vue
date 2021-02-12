@@ -28,7 +28,8 @@ export default {
 .menu-link {
   color: $color-neutralDarkest;
   font-size: 20px;
-  font-family: $font-sourceSansPro;
+  font-weight: 600;
+  font-family: $font-montserratAlternates;
 
   &--active {
     color: $color-primary;
