@@ -6,6 +6,9 @@ the-development-video-modal(
 registration-modal(
   v-if="modal === 'registration'"
 )
+authorization-modal(
+  v-if="modal === 'authorization'"
+)
 div.landing
   div.section.section--welcome
     div.welcome-title ООО “Современные технологии автоматизации”
@@ -165,12 +168,14 @@ div.landing
 <script>
 import TheDevelopmentVideoModal from '@core/components/TheDevelopmentVideoModal.vue';
 import RegistrationModal from '@modules/registration/Registration.vue';
+import AuthorizationModal from '@modules/authorization/Authorization.vue';
 
 export default {
   name: 'Landing',
   components: {
     TheDevelopmentVideoModal,
     RegistrationModal,
+    AuthorizationModal,
   },
   props: {
     modal: {

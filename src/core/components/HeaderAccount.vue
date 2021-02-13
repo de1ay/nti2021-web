@@ -1,6 +1,7 @@
 <template lang="pug">
 div.header-account
-  button.action-sign_in Вход
+  button.action-sign_in(
+    @click="$router.push({ name: 'Login' })") Вход
   button.action-sign_up(
     @click="$router.push({ name: 'Registration' })") Нет аккаунта?
 </template>

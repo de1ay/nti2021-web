@@ -44,7 +44,7 @@ const actions = {
         return Promise.resolve(data);
       });
   },
-  async authorize(store, { username, password }) {
+  async authorize(store, { username, password, token }) {
     const { commit } = store;
     return axios({
       url: '/dj-rest-auth/login/',
@@ -52,6 +52,7 @@ const actions = {
       data: {
         password,
         username,
+        token,
       },
     })
       .then((resp) => {

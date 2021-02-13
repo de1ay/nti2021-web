@@ -6,6 +6,7 @@ import ScheduleRoutes from '@modules/schedule/routes';
 import BroadcastRoutes from '@modules/broadcast/routes';
 import AboutRoutes from '@modules/about/routes';
 import RegirationRoutes from '@modules/registration/routes';
+import AuthorizationRoutes from '@modules/authorization/routes';
 
 const routes = [
   {
@@ -22,6 +23,7 @@ const routes = [
     ],
   },
   ...RegirationRoutes,
+  ...AuthorizationRoutes,
 ];
 
 export default routes;
