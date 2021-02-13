@@ -9,12 +9,15 @@
   },
   "dependencies": {
     "@mdi/js": "^5.9.55",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "hls.js": "^0.14.17",
     "mdi-vue": "^2.2.0",
     "vue": "^3.0.0",
     "vue-plyr": "^7.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-snap": "^1.0.0-alpha.5",
+    "vue-toastification": "^2.0.0-rc.1",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

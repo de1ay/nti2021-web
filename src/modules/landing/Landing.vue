@@ -3,6 +3,9 @@ the-development-video-modal(
   v-if="isDevelopmentVideoModalOpen"
   @close="setIsDevelopmentVideoModalOpen(false)"
 )
+registration-modal(
+  v-if="modal === 'registration'"
+)
 div.landing
   div.section.section--welcome
     div.welcome-title ООО “Современные технологии автоматизации”
@@ -154,15 +157,26 @@ div.landing
         | быстро получить в месте отгрузки необходимый груз
       img.how-section__image.how-section__image--warehouse(
         :src="require('@assets/images/warehouse_top_down.png')")
+    div.section.section--employees
+      div.employees-title Наша команда разработки
+      div.employees-description Мы можете обратиться к нам лично при любых вопросах
 </template>
 
 <script>
 import TheDevelopmentVideoModal from '@core/components/TheDevelopmentVideoModal.vue';
+import RegistrationModal from '@modules/registration/Registration.vue';
 
 export default {
   name: 'Landing',
   components: {
     TheDevelopmentVideoModal,
+    RegistrationModal,
+  },
+  props: {
+    modal: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {

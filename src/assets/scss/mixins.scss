@@ -1,0 +1,21 @@
+@mixin scroll-view($maxHeight, $thumbColor, $trackColor) {
+  max-height: $maxHeight;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $thumbColor $trackColor;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $trackColor;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    max-height: 50px;
+    background: $thumbColor;
+    border-radius: 50px;
+  }
+}

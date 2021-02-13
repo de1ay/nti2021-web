@@ -2,12 +2,11 @@ const routes = [
   {
     path: '/welcome',
     name: 'Landing',
-    components: {
-      default: () => import(
-        /* webpackChunkName: "landing" */
-        '../Landing.vue'
-      ),
-    },
+    component: () => import(
+      /* webpackChunkName: "landing" */
+      '../Landing.vue'
+    ),
+    props: (route) => ({ modal: route.query.modal }),
   },
 ];
 

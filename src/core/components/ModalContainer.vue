@@ -11,6 +11,7 @@ div.modal
 <script>
 export default {
   name: 'Modal',
+  emits: ['close'],
 };
 </script>
 
@@ -25,7 +26,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba($color: $color-text, $alpha: 0.8);
+  background-color: rgba($color: $color-text, $alpha: 0.95);
 
   &-close {
     position: absolute;

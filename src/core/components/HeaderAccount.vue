@@ -1,7 +1,8 @@
 <template lang="pug">
 div.header-account
   button.action-sign_in Вход
-  button.action-sign_up Нет аккаунта?
+  button.action-sign_up(
+    @click="$router.push({ name: 'Registration' })") Нет аккаунта?
 </template>
 
 <script>
@@ -27,7 +28,6 @@ export default {
       color: $color-surface;
       background: $color-primary;
       font-size: 20px;
-      font-weight: 600;
       font-family: $font-firaSansCondensed;
       border-radius: 10px;
       transition: background-color .2s ease-in-out;

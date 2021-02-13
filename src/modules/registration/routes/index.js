@@ -2,12 +2,7 @@ const routes = [
   {
     path: '/registration',
     name: 'Registration',
-    components: {
-      default: () => import(
-        /* webpackChunkName: "registration" */
-        '../Registration.vue'
-      ),
-    },
+    redirect: { name: 'Landing', query: { modal: 'registration' } },
   },
 ];
 

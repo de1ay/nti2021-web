@@ -16,6 +16,7 @@ export default {
   components: {
     ModalContainer,
   },
+  emits: ['close'],
 };
 </script>
 
