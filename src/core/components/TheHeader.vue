@@ -11,18 +11,22 @@ header.header
         text="Главная"
       )
       HeaderMenuLink(
+        v-if="isAuthorized"
         to="Profile"
         text="Личный кабинет"
       )
       HeaderMenuLink(
+        v-if="isAuthorized"
         to="Warehouse"
         text="Склад"
       )
       HeaderMenuLink(
+        v-if="isAuthorized"
         to="Schedule"
         text="Расписание"
       )
       HeaderMenuLink(
+        v-if="isUserAdmin"
         to="Broadcast"
         text="Видео-поток"
       )
@@ -34,6 +38,7 @@ header.header
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import HeaderMenuLink from './HeaderMenuLink.vue';
 import HeaderAccount from './HeaderAccount.vue';
 
@@ -42,6 +47,9 @@ export default {
   components: {
     HeaderMenuLink,
     HeaderAccount,
+  },
+  computed: {
+    ...mapGetters(['isAuthorized', 'isUserAdmin']),
   },
 };
 </script>
