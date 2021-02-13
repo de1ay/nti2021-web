@@ -10,11 +10,12 @@ div.header-account(v-else)
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 
 export default {
   name: 'HeaderAccount',
   computed: {
+    ...mapState(['user', 'userInfo']),
     ...mapGetters(['isAuthorized', 'isUserAdmin']),
   },
 };
