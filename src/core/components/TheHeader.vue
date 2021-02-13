@@ -16,12 +16,10 @@ header.header
         text="Личный кабинет"
       )
       HeaderMenuLink(
-        v-if="isAuthorized"
         to="Warehouse"
         text="Склад"
       )
       HeaderMenuLink(
-        v-if="isAuthorized"
         to="Schedule"
         text="Расписание"
       )

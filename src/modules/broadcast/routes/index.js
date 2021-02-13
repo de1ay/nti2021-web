@@ -8,6 +8,10 @@ const routes = [
         '../Broadcast.vue'
       ),
     },
+    meta: {
+      requiresAuth: true,
+      requiresAdmin: true,
+    },
   },
 ];
 

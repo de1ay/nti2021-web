@@ -1,4 +1,5 @@
 import TheLayout from '@core/components/TheLayout.vue';
+import Logout from '@core/views/Logout.vue';
 import LandingRoutes from '@modules/landing/routes';
 import ProfileRoutes from '@modules/profile/routes';
 import WarehouseRoutes from '@modules/warehouse/routes';
@@ -21,6 +22,11 @@ const routes = [
       ...BroadcastRoutes,
       ...AboutRoutes,
     ],
+  },
+  {
+    path: '/logout',
+    name: 'Logout',
+    component: Logout,
   },
   ...RegirationRoutes,
   ...AuthorizationRoutes,

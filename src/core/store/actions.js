@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios from '@core/api/axios';
 
 const actions = {
   async getUser(store) {
     const { commit, dispatch } = store;
     return axios({
-      url: '/api/users/me/',
+      url: '/users/me/',
       method: 'GET',
     })
       .then((resp) => {
@@ -26,7 +26,7 @@ const actions = {
   async getUserInfo(store) {
     const { state, commit } = store;
     return axios({
-      url: `/api/users-info/user/${state.user.id}/`,
+      url: `/users-info/user/${state.user.id}/`,
       method: 'GET',
     })
       .then((resp) => {
