@@ -35,8 +35,8 @@ export default {
       timer: null,
     };
   },
-  mounted() {
-    function timerfunc() {
+  methods: {
+    timerfunc() {
       axios
         .get('https://api.offsound.ru/item/')
         // eslint-disable-next-line no-return-assign
@@ -71,12 +71,13 @@ export default {
           this.shelf21 = shelf21;
           this.shelf22 = shelf22;
         });
-    }
-    this.timer = timerfunc();
-    setInterval(this.timer.bind(this), 1000);
+    },
+  },
+  mounted() {
+    this.timer = setInterval(this.timerfunc.bind(this), 1000);
   },
   beforeUnmount() {
-    this.timer = null;
+    clearInterval(this.timer);
   },
 };
 </script>
