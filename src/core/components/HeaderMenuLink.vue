@@ -1,7 +1,9 @@
 <template lang="pug">
 router-link.menu-link(
+  v-if="!customLink"
   :to="{ name: $props.to, params: $props.params }"
   active-class="menu-link--active") {{ $props.text }}
+a.menu-link(v-else :href="customLink") {{ $props.text }}
 </template>
 
 <script>
@@ -19,6 +21,10 @@ export default {
     params: {
       type: Object,
       default: undefined,
+    },
+    customLink: {
+      type: String,
+      default: null,
     },
   },
 };
@@ -38,6 +44,7 @@ export default {
 
   &--active {
     color: $color-primary;
+    text-decoration: underline;
   }
 
 }

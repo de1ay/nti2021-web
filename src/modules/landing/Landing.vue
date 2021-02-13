@@ -34,7 +34,7 @@ div.landing
         | Более 60% клиентов к нам обращаются повторно с другими задачами автоматизации.
         | Главным нашим подразделением является автоматизация складских
         | помещений по типу компании Amazon
-      button.about-button Узнать больше
+      button.about-button(@click="$router.push({ name: 'About' })") Узнать больше
     div.about-right
       img.about-image(:src="require('@assets/images/warehouse-1.jpg')")
       div.about-card.about-card--reviews
@@ -89,7 +89,7 @@ div.landing
         | Мы это знаем не по наслышке. По нашим исследованиям работники на больших складах тратят
         | больше 35% рабочего времени в пустую. только потому что они люди.
         | Мы предлагаем вам это исправить!
-      div.workers-button Свяжитесь со мной
+      div.workers-button(@click="$router.push({ name: 'About' })") Свяжитесь со мной
   div.section.section--why
     div.why-title Почему вам стоит уходить в автоматизацию?
     div.why-text
@@ -160,9 +160,9 @@ div.landing
         | быстро получить в месте отгрузки необходимый груз
       img.how-section__image.how-section__image--warehouse(
         :src="require('@assets/images/warehouse_top_down.png')")
-    div.section.section--employees
-      div.employees-title Наша команда разработки
-      div.employees-description Мы можете обратиться к нам лично при любых вопросах
+//   div.section.section--employees
+//      div.employees-title Наша команда разработки
+//      div.employees-description Мы можете обратиться к нам лично при любых вопросах
 </template>
 
 <script>
