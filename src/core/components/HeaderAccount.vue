@@ -1,14 +1,23 @@
 <template lang="pug">
-div.header-account
+div.header-account(v-if="!isAuthorized")
   button.action-sign_in(
     @click="$router.push({ name: 'Login' })") Вход
   button.action-sign_up(
     @click="$router.push({ name: 'Registration' })") Нет аккаунта?
+div.header-account(v-else)
+  button.action-logout(
+    @click="$router.replace({ name: 'Logout' })") Выйти
 </template>
 
 <script>
+import { mapGetters, mapState } from 'vuex';
+
 export default {
   name: 'HeaderAccount',
+  computed: {
+    ...mapState(['user', 'userInfo']),
+    ...mapGetters(['isAuthorized', 'isUserAdmin']),
+  },
 };
 </script>
 
@@ -40,7 +49,7 @@ export default {
 
     }
 
-    &-sign_up {
+    &-sign_up, &-logout {
       margin-left: 5px;
       background: none;
       font-family: $font-firaSansCondensed;

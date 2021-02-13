@@ -19,7 +19,7 @@ teleport(to="body")
         v-model="token"
         v-bind="tokenDefinition"
       )
-      button.form-submit(@click="signInStep1") Продолжить
+      button.form-submit(@click="signInStep2") Продолжить
 </template>
 
 <script>
@@ -81,7 +81,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions('session', ['authorize']),
+    ...mapActions(['authorize']),
     submit() {
       this.validateForm();
       if (this.isFormValid) {
@@ -129,6 +129,7 @@ export default {
           if (resp.data.error !== undefined) {
             return Promise.reject(resp.data.error);
           }
+          this.isSecondStep = true;
           toast.info('Введите одноразовый код из письма');
           return Promise.resolve(resp.data);
         })

@@ -21,6 +21,7 @@ export default {
 <style lang="scss" scoped>
 .layout {
   max-width: 1420px;
+  min-width: 1420px;
   flex: 1;
 }
 </style>

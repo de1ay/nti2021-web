@@ -10,6 +10,7 @@ import 'vue-toastification/dist/index.css';
 import App from '@core/App.vue';
 import router from '@core/router';
 import store from '@core/store';
+import '@core/api/axios';
 
 createApp(App)
   .use(router)
