@@ -12,13 +12,13 @@ footer.footer
     router-link.footer-text(:to="{name: 'Profile'}") Личный кабинет
     router-link.footer-text(:to="{name: 'Warehouse'}") Склад
     router-link.footer-text(:to="{name: 'Broadcast'}") Видео-поток
-    router-link.footer-text(:to="{name: 'About'}") О нас
+    //router-link.footer-text(:to="{name: 'About'}") О нас
   div.footer-column.footer-column--support
     div.footer-text.footer-text--heading Поддержка
     div.footer-text(@click="setIsDevelopmentVideoModalOpen(true)") Видео разработки
-    div.footer-text Оставить сообщение
-    div.footer-text Регламент
-    div.footer-text Дополнительные материалы
+//    div.footer-text(@click="$router.push({ name: 'About' })") Оставить сообщение
+//    div.footer-text Регламент
+//    div.footer-text Дополнительные материалы
 </template>
 
 <script>

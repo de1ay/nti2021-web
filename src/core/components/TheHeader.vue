@@ -13,25 +13,26 @@ header.header
       HeaderMenuLink(
         v-if="isAuthorized"
         to="Profile"
+        customLink="https://api.offsound.ru/admin"
         text="Личный кабинет"
       )
       HeaderMenuLink(
         to="Warehouse"
         text="Склад"
       )
-      HeaderMenuLink(
-        to="Schedule"
-        text="Расписание"
-      )
+      //HeaderMenuLink(
+      //  to="Schedule"
+      //  text="Расписание"
+      //)
       HeaderMenuLink(
         v-if="isUserAdmin"
         to="Broadcast"
         text="Видео-поток"
       )
-      HeaderMenuLink(
-        to="About"
-        text="О нас"
-      )
+      //HeaderMenuLink(
+      //  to="About"
+      //  text="О нас"
+      //)
   HeaderAccount
 </template>
 

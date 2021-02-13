@@ -1,5 +1,7 @@
 <template lang="pug">
 div.layout
+  teleport(to="body")
+    ScrollUp
   TheHeader
   router-view
   TheFooter
@@ -8,12 +10,14 @@ div.layout
 <script>
 import TheHeader from './TheHeader.vue';
 import TheFooter from './TheFooter.vue';
+import ScrollUp from './ScrollUp.vue';
 
 export default {
   name: 'TheLayout',
   components: {
     TheHeader,
     TheFooter,
+    ScrollUp,
   },
 };
 </script>
